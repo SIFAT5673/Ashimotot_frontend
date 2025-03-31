@@ -84,7 +84,7 @@ const Login = () => {
                  <LoadingButton size={"lg"} className='w-full mt-3' type='submit' isLoading ={isLoading}> Login Now</LoadingButton> 
 
                 </form>
-                <h1 className='mt-4 text-lg text-gray-800'>Don't have an account?{"  "}
+                <h1 className='mt-4 text-lg text-gray-800'>Don&apos;t have an account?{"  "}
                     <Link href="/auth/signup">
                         <span className='text-blue-800 underline cursor-pointer font-medium'>
                             Signup Here
