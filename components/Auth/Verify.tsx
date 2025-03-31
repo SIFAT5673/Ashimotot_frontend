@@ -54,7 +54,7 @@ const Verify = () => {
         }
       };
 
-      const handeleSubmit =async () => {
+      const handleSubmit =async () => {
         const otpValue = otp.join("");
         const verifyReq = async () => await axios.post(`${BASE_API_URL}/users/verify`,{otp:otpValue},{withCredentials: true});
         const result = await handelAuthRequest (verifyReq, setIsLoading);
@@ -98,10 +98,10 @@ const Verify = () => {
             })}
         </div>
         <div className='flex items-center mt-4 space-x-2'>
-            <h1 className='text-sm sm:text-lg font-medium text-gray-700 '>Didn't get the otp code? {"  "}</h1>
+            <h1 className='text-sm sm:text-lg font-medium text-gray-700 '>Didn&apos;t get the otp code? {"  "}</h1>
             <button onClick={handleResendOtp} className='text-sm sm:text-lg font-medium text-blue-900 underline'>Resend Code</button>
         </div>
-        <LoadingButton onClick={handeleSubmit} isLoading={isLoading} size={"lg"}className='mt-6 w-52'>
+        <LoadingButton onClick={handleSubmit} isLoading={isLoading} size={"lg"}className='mt-6 w-52'>
             Verify
         </LoadingButton>
     </div>
