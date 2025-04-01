@@ -45,9 +45,7 @@ const Signup = () => {
 
     const handleSubmit = async(e: FormEvent) =>{
         e.preventDefault();
-        const signupReq = async () => await axios.post (`${BASE_API_URL}/users/signup`, formData,{
-            withCredentials: true,
-        } );
+        const signupReq = async () => await axios.post(`${BASE_API_URL}/api/users/signup`, formData, { withCredentials: true });
 
         const result = await handelAuthRequest(signupReq,setIsLoading);
 
